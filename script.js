@@ -255,7 +255,7 @@ function showUserData(data) {
   container.innerHTML = Object.entries(userMap)
     .map(([user, fills]) => `
       <div class="user-section">
-        <h3>${sanitizeText(user)}</h3>
+        <h3>${sanitizeText(user)} — ${fills.length} fill${fills.length === 1 ? '' : 's'}</h3>
         <div class="user-fills">
           ${fills.map(entry => `
             <div class="entry">
